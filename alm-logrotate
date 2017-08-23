@@ -1,4 +1,4 @@
-/var/log/modaemon
+/var/log/alm-agent.log
 /var/log/awslogs.log
 /var/containerlogs/log/startup.log
 /var/containerlogs/log/bundler

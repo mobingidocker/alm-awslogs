@@ -22,7 +22,7 @@ RUN chmod 755 /restart-awslogs.sh
 
 # logrotate
 RUN rm -f /etc/logrotate.d/awslogs
-COPY mo-logrotate /etc/logrotate.d/mo-logrotate
+COPY alm-logrotate /etc/logrotate.d/alm-logrotate
 
 COPY run.sh /run.sh
 RUN chmod 755 /run.sh
