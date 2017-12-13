@@ -1,5 +1,6 @@
 /var/log/alm-agent.log
 /var/log/awslogs.log
+/var/container/log/dockerrun.*.log
 /var/container/log/startup.log
 /var/container/log/bundler
 /var/container/log/supervisor/supervisord.log
