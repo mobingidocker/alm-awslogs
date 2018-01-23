@@ -27,4 +27,7 @@ COPY alm-logrotate /etc/logrotate.d/alm-logrotate
 COPY run.sh /run.sh
 RUN chmod 755 /run.sh
 
+HEALTHCHECK --start-period=3m --interval=1m --timeout=5s \
+	CMD supervisorctl status restart-awslogs | grep RUNNING || exit 1
+
 CMD ["/run.sh"]
