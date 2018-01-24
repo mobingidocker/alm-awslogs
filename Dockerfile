@@ -28,6 +28,6 @@ COPY run.sh /run.sh
 RUN chmod 755 /run.sh
 
 HEALTHCHECK --start-period=3m --interval=1m --timeout=5s \
-	CMD supervisorctl status | grep -v RUNNING && exit 1
+	CMD supervisorctl status | grep -v RUNNING && exit 1 || exit 0
 
 CMD ["/run.sh"]
